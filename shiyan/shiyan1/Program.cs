@@ -21,6 +21,15 @@ namespace shiyan1
             Console.WriteLine();
             map = wipeDown(map);
             display(map);
+            Console.WriteLine();
+            map = wipeUp(map);
+            display(map);
+            Console.WriteLine();
+            map = wipeLeft(map);
+            display(map);
+            Console.WriteLine();
+            map = wipeRight(map);
+            display(map);
             Console.ReadLine();
         }
         private static int[] RemoveZero(int[] array)
@@ -98,6 +107,43 @@ namespace shiyan1
             return map;
 
         }
+        private static int[,] wipeLeft(int[,] map)
+        {
+            int[] middle = new int[map.GetLength(1)];
+            for (int r = 0; r < map.GetLength(0); r++)
+            {
+                for (int i = 0; i < map.GetLength(1); i++)
+                {
+                    middle[i] = map[r, i];
+                }
+                middle = merge(middle);
+                for (int i = 0; i < map.GetLength(1); i++)
+                {
+                    map[r, i] = middle[i];
+                }
+            }
+            return map;
+
+        }
+        private static int[,] wipeRight(int[,] map)
+        {
+            int[] middle = new int[map.GetLength(1)];
+            for (int r = 0; r < map.GetLength(0); r++)
+            {
+                for (int i = map.GetLength(1) - 1; i >= 0; i--) 
+                {
+                    middle[map.GetLength(1) - 1 - i] = map[r, i];
+                }
+                middle = merge(middle);
+                for (int i = map.GetLength(1) - 1; i >= 0; i--)
+                {
+                    map[r, i] = middle[map.GetLength(1) - 1 - i];
+                }
+            }
+            return map;
+
+        }
+
     }
 }
 
