@@ -1,0 +1,6 @@
+D:\github\practice\shiyan\ball\bin\Debug\ball.exe.config
+D:\github\practice\shiyan\ball\bin\Debug\ball.exe
+D:\github\practice\shiyan\ball\bin\Debug\ball.pdb
+D:\github\practice\shiyan\ball\obj\Debug\ball.csprojResolveAssemblyReference.cache
+D:\github\practice\shiyan\ball\obj\Debug\ball.exe
+D:\github\practice\shiyan\ball\obj\Debug\ball.pdb
