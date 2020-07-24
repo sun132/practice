@@ -10,19 +10,30 @@ namespace ball
     {
         static void Main(string[] args)
         {
-            Size boal01 = new Size("01", 10);
-            Size boal02 = new Size();
-            boal02.Name = "02";
-            boal02.Diameter = 39;
-            Size[] boalArray = new Size[5];
-            boalArray[0] = boal01;
-            boalArray[1] = boal02;
-            boalArray[2] = new Size("03",53);
-            boalArray[3] = new Size("04", 5);
-            boalArray[4] = new Size("05", 92);
-            Size result = Small(boalArray);
-            Console.WriteLine(result.Name);
-            Console.ReadLine();
+            //Size boal01 = new Size("01", 10);
+            //Size boal02 = new Size();
+            //boal02.Name = "02";
+            //boal02.Diameter = 39;
+            //Size[] boalArray = new Size[5];
+            //boalArray[0] = boal01;
+            //boalArray[1] = boal02;
+            //boalArray[2] = new Size("03",53);
+            //boalArray[3] = new Size("04", 5);
+            //boalArray[4] = new Size("05", 92);
+            //Size result = Small(boalArray);
+            //Console.WriteLine(result.Name);
+            //Console.ReadLine();
+            UserList list = new UserList();
+            list.Add(new User("小红","123"));
+            list.Add(new User());
+            list.Add(new User());
+            list.Add(new User());
+            for (int i = 0; i < list.Count; i++)
+            {
+                User user = list.GetElement(i);
+                user.PrintUser();
+            }
+
 
         }
         private static Size Small(Size[] array)
@@ -40,5 +51,9 @@ namespace ball
             }
             return array[number];
         }
+        
+
+        
+        
     }
 }
